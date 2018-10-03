@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/dist": true,
+        "**/build": true,
+        "**/node_modules": true,
+        "**/.vscode": true,
+        "package-lock.json": true,
+        ".gitignore": true
+    },
+    "search.exclude": {
+        "**/dist": true,
+        "**/build": true
+    },
+    "files.watcherExclude": {
+        "**/dist/*/**": true,
+        "**/build/*/**": true
+    }
+}

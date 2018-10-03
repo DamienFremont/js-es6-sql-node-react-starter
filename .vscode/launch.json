@@ -7,13 +7,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Node + TS support",
-            "program": "${workspaceFolder}/src/server/index.ts",
-            "cwd": "${workspaceFolder}",
-            "protocol": "inspector",
-            "outFiles": [
-              "${workspaceFolder}/dist/index.js"
-            ]
+            "name": "Launch Node",
+            "program": "${workspaceFolder}/src/server/index.js"
         },
         {
             "type": "chrome",

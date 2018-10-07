@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 import React from 'react';
 import intl from 'react-intl-universal';
-import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import MainLayout from './layouts/MainLayout';
 import logo from './logo.svg';

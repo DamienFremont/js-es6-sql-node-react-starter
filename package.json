@@ -25,6 +25,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
+    "esm": "^3.0.84",
     "concurrently": "^3.5.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",

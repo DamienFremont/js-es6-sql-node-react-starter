@@ -293,3 +293,5 @@ Legend
 * file download
 
 * sql dump https://stackoverflow.com/questions/36392113/import-sql-dump-within-node-environment
+
+* express es6 https://github.com/developit/express-es6-rest-api

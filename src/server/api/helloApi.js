@@ -1,22 +1,15 @@
-'use strict';
+import { Router } from 'express';
 
-const express = require('express');
-const bodyParser = require('body-parser');
+export default () => {
+	let api = Router();
 
-module.exports = {
-    router
-};
-
-function router() {
-    const router = express.Router();
-    router.use(bodyParser.json());
-
-    router.get('/api/hello', (req, res) => {
-        const body = { 
-            express: 'Hello From Express'
+	// perhaps expose some API metadata at the root
+    api.get('/', (req, res) => {
+        const body = {
+            express: 'Hello From Express in JS s'
         };
         res.send(body);
     });
 
-    return router;
+	return api;
 }

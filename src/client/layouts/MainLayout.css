@@ -1,0 +1,5 @@
+/* FIXME: You can use this css code to get gutterless grid in bootstrap. */
+.container-fluid.no-gutters {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }

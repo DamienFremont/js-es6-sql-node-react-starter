@@ -3,19 +3,19 @@ import http from 'http';
 
 import { version } from '../../package.json';
 import api from './api';
-import RouterUtils from './routes/RouterUtils';
-import EnvUtils from './utils/EnvUtils';
 import LoggerHelper from './helpers/LoggerHelper';
+import staticsRouter from './routes/staticsRouter';
+import EnvUtils from './utils/EnvUtils';
 
 /**
  * Main script for server
  */
 
-const BASE_PATH = '../../';
+const root = '../../';
 
 // env
 EnvUtils.initOrOverride();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 // logger
 var logger = new LoggerHelper();
@@ -33,12 +33,12 @@ app.use('/api', api());
 // app.use(express.static(path.join(__dirname, base, 'build'))) 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(RouterUtils.createStaticsRouter(BASE_PATH));
+app.use(staticsRouter({ root }));
 
 // start
-app.server.listen(PORT, () => {
+app.server.listen(port, () => {
   logger.logEnd();
-  logger.logHostname(PORT);
+  logger.logHostname(port);
 })
 
 export default app;

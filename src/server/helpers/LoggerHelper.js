@@ -9,24 +9,6 @@ class LoggerHelper {
     this.init();
   }
 
-  init() {
-    const level = process.env.LOGGER_LEVEL || 'info';
-    const lo = winston.createLogger({
-      level,
-      format: winston.format.json(),
-      transports: [
-        new winston.transports.File({ filename: 'error.log', level: 'error' }),
-        new winston.transports.File({ filename: 'combined.log' })
-      ]
-    });
-    if (process.env.NODE_ENV !== 'production') {
-      lo.add(new winston.transports.Console({
-        format: winston.format.simple()
-      }));
-    }
-    this.instance = lo;
-  }
-
   logBanner(version) {
     fs.readFile('private/banner.txt', 'utf8', (err, data) => {
       this.instance.log('info', data);
@@ -68,5 +50,22 @@ class LoggerHelper {
     console.timeEnd(this.START_DURATION);
   }
 
+  init() {
+    const level = process.env.LOGGER_LEVEL || 'info';
+    const lo = winston.createLogger({
+      level,
+      format: winston.format.json(),
+      transports: [
+        new winston.transports.File({ filename: 'error.log', level: 'error' }),
+        new winston.transports.File({ filename: 'combined.log' })
+      ]
+    });
+    if (process.env.NODE_ENV !== 'production') {
+      lo.add(new winston.transports.Console({
+        format: winston.format.simple()
+      }));
+    }
+    this.instance = lo;
+  }
 }
 export default LoggerHelper;

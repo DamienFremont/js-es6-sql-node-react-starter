@@ -35,7 +35,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(staticsRouter({ root }));
 
-// start
+// serve
 app.server.listen(port, () => {
   logger.logEnd();
   logger.logHostname(port);

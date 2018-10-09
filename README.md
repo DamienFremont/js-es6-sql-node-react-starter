@@ -113,44 +113,44 @@ Legend
 
 ![alt text](docs/README-feature-packaging.png)
 
-|     Feature      | State |         Note |
-|:----------------:|------:|-------------:|
-|    build-dev     |   :x: |              |
-|    build-prod    |   :x: |              |
-|     conf-env     |   :x: | NODE-ENV=... |
-|    conf-file     |   :x: |       dotenv |
-| conf-placeholder |   :x: |       dotenv |
-|      banner      |   :x: |   banner.txt |
-|      logger      |   :x: | level in env |
+|     Feature      |              State |         Note |
+|:----------------:|-------------------:|-------------:|
+|    build-dev     | :heavy_check_mark: |              |
+|    build-prod    | :heavy_check_mark: |              |
+|     conf-env     | :heavy_check_mark: | NODE-ENV=... |
+|    conf-file     |                :x: |       dotenv |
+| conf-placeholder | :heavy_check_mark: |       dotenv |
+|      banner      | :heavy_check_mark: |   banner.txt |
+|      logger      | :heavy_check_mark: | level in env |
 
 ## App
 
 ![alt text](docs/README-feature-app.png)
 
-|         Feature         |      State |                       Note |
-|:-----------------------:|-----------:|---------------------------:|
-|    project-structure    |        :x: | components, pages, layouts |
-|  rendering-client-side  |        :x: |                        SPA |
-|  rendering-server-side  | :no_entry: |                        SSR |
-| rendering-universal-app | :no_entry: |                 Isomorphic |
-|      local-message      |        :x: |                       JSON |
-|    local-lang-detect    |        :x: |                    Browser |
-|    local-lang-change    |        :x: |                            |
-|          icons          |        :x: |                FontAwesome |
-|       layout-grid       |        :x: |                            |
-|      layout-navbar      |        :x: |                            |
-|      layout-routes      |        :x: |                            |
-|       layout-help       |        :x: |          general and pages |
-|       layout-urls       |        :x: |             SSR, CSR perfs |
+|         Feature         |              State |                       Note |
+|:-----------------------:|-------------------:|---------------------------:|
+|    project-structure    | :heavy_check_mark: | components, pages, layouts |
+|  rendering-client-side  | :heavy_check_mark: |                        SPA |
+|  rendering-server-side  |         :no_entry: |                        SSR |
+| rendering-universal-app |         :no_entry: |                 Isomorphic |
+|      local-message      | :heavy_check_mark: |                       JSON |
+|    local-lang-detect    | :heavy_check_mark: |                    Browser |
+|    local-lang-change    | :heavy_check_mark: |                            |
+|          icons          | :heavy_check_mark: |                FontAwesome |
+|       layout-grid       | :heavy_check_mark: |                            |
+|      layout-navbar      | :heavy_check_mark: |                            |
+|      layout-routes      | :heavy_check_mark: |                            |
+|       layout-help       | :heavy_check_mark: |          general and pages |
+|       layout-urls       | :heavy_check_mark: |             SSR, CSR perfs |
 
 ## Accessibility
 
-|      Feature      | State | Note |
-|:-----------------:|------:|-----:|
-| access-breadcrumb |   :x: |      |
-|    access-size    |   :x: |   em |
-| access-wcag-aria  |   :x: |      |
-|  access-offline   |   :x: |      |
+|      Feature      |              State | Note |
+|:-----------------:|-------------------:|-----:|
+| access-breadcrumb | :heavy_check_mark: |      |
+|    access-size    |                :x: |   em |
+| access-wcag-aria  |                :x: |      |
+|  access-offline   |                :x: |      |
 
 ## Security
 
@@ -295,3 +295,5 @@ Legend
 * sql dump https://stackoverflow.com/questions/36392113/import-sql-dump-within-node-environment
 
 * express es6 https://github.com/developit/express-es6-rest-api
+
+* sequ express https://github.com/sequelize/express-example

@@ -2,49 +2,23 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/react-fontawesome": "^0.1.3",
-    "axios": "^0.18.0",
-    "bootstrap": "^4.1.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-intl": "^2.7.0",
-    "react-intl-universal": "^1.13.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4",
-    "reactstrap": "^6.4.0"
-  },
+  "dependencies": {},
   "scripts": {
-    "start": "node src/server/index.js",
-    "build": "react-scripts build",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,Node,React\" -c \"yellow.bold,green.bold,blue.bold\" \"npm run watch-sass\" \"npm run watch-node\" \"react-scripts start\"",
-    "watch-sass": "node-sass -w src/public/css/main.scss public/css/main.css",
-    "watch-node": "nodemon src/server/index.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "node server/src/index.js",
+    "build": "npm install && cd client && npm run build",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Node,React\" -c \"green.bold,blue.bold\" \"npm run watch-server\" \"npm run watch-client\"",
+    "watch-client": "cd client && npm run start",
+    "watch-server": "nodemon server/src/index.js",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
-  "proxy": "http://localhost:5000",
   "devDependencies": {
+    "concurrently": "^4.0.1",
+    "dotenv": "^6.1.0",
     "esm": "^3.0.84",
-    "concurrently": "^3.5.1",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.3",
-    "node-sass": "^4.9.3",
-    "nodemon": "^1.18.4",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "winston": "^3.1.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }

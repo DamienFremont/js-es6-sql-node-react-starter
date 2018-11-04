@@ -4,8 +4,6 @@ import React from 'react';
 import intl from 'react-intl-universal';
 import { Link } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, Button, Container, ListGroup, ListGroupItem } from 'reactstrap';
-
-import packageJson from '../../../package.json';
 import logo from '../logo.svg';
 
 // TODO: move logo
@@ -45,8 +43,8 @@ class About extends React.Component {
               {intl.get('app.title')}
             </ListGroupItem>
             <ListGroupItem>
-              {intl.get('about.version')} {' '}
-              {packageJson.version}
+              {intl.get('about.version')} {' : '}
+              {process.env.REACT_APP_VERSION}
             </ListGroupItem>
             <ListGroupItem>
               {intl.get('about.gethelp', { appname: intl.get('app.title') })}

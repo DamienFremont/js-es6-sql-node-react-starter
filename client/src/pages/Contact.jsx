@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import intl from 'react-intl-universal';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Button } from 'reactstrap';
-import BreadcrumbItem from 'reactstrap/lib/BreadcrumbItem';
+import { Breadcrumb, Button, BreadcrumbItem } from 'reactstrap';
 
 class Contact extends React.Component {
 

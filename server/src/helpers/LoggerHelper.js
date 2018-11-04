@@ -9,8 +9,8 @@ class LoggerHelper {
     this.init();
   }
 
-  logBanner(version) {
-    fs.readFile('private/banner.txt', 'utf8', (err, data) => {
+  logBanner(bannerPath, version) {
+    fs.readFile(bannerPath, 'utf8', (err, data) => {
       this.instance.log('info', data);
       this.instance.log('info', ` :: NodeJS ::          (v${version})`);
       this.instance.log('info', ' ');

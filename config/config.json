@@ -1,0 +1,16 @@
+{
+  "development": {
+    "url": "sqlite:memory:",
+    "dialect": "sqlite",
+    "operatorsAliases": false
+  },
+  "test": {
+    "url": "postgres://postgres:postgres@localhost:5432/example-testing",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}

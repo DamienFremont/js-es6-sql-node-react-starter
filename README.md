@@ -168,13 +168,13 @@ Legend
 
 ## API
 
-|      Feature       | State |    Note |
-|:------------------:|------:|--------:|
-|     api-client     |   :x: |         |
-|     api-server     |   :x: | Express |
-|    api-swagger     |   :x: | OpenAPI |
-|    api-version     |   :x: |         |
-| api-private-public |   :x: |         |
+|      Feature       |              State |    Note |
+|:------------------:|-------------------:|--------:|
+|     api-client     |                :x: |         |
+|     api-server     | :heavy_check_mark: | Express |
+|    api-swagger     |                :x: | OpenAPI |
+|    api-version     |                :x: |         |
+| api-private-public |                :x: |         |
 
 ## Service
 
@@ -188,24 +188,24 @@ Legend
 
 ## Data
 
-|      Feature      | State |                  Note |
-|:-----------------:|------:|----------------------:|
-|   file-download   |   :x: |                       |
-|    file-upload    |   :x: | browse, drop, preview |
-|    data-schema    |   :x: |                       |
-|   data-dataset    |   :x: |                       |
-|   data-orm-crud   |   :x: |                       |
-| data-orm-paginate |   :x: |                       |
-|  data-orm-search  |   :x: |                       |
+|      Feature      |              State |                  Note |
+|:-----------------:|-------------------:|----------------------:|
+|   file-download   |                :x: |                       |
+|    file-upload    |                :x: | browse, drop, preview |
+|    data-schema    |                :x: |                       |
+|   data-dataset    |                :x: |                       |
+|   data-orm-crud   | :heavy_check_mark: |                       |
+| data-orm-paginate | :heavy_check_mark: |                       |
+|  data-orm-search  | :heavy_check_mark: |                       |
 
 ## Entity
 
-|    Feature     | State |                                           Note |
-|:--------------:|------:|-----------------------------------------------:|
-|  data-entity   |   :x: | entity, value-object, id, dates, deleted-by-at |
-| data-reference |   :x: |                        reference (name, label) |
-|  data-history  |   :x: |                        version, history, event |
-|  data-domain   |   :x: |             UUID, join models by only one UUID |
+|    Feature     |              State |                                           Note |
+|:--------------:|-------------------:|-----------------------------------------------:|
+|  data-entity   | :heavy_check_mark: | entity, value-object, id, dates, deleted-by-at |
+| data-reference |                :x: |                        reference (name, label) |
+|  data-history  |                :x: |                        version, history, event |
+|  data-domain   |                :x: |             UUID, join models by only one UUID |
 
 ## Workflow
 
@@ -297,3 +297,4 @@ Legend
 * express es6 https://github.com/developit/express-es6-rest-api
 
 * sequ express https://github.com/sequelize/express-example
+* sequ express generator https://github.com/tommybananas/finale

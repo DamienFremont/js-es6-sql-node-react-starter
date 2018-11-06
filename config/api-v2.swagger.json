@@ -1,0 +1,72 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a sample server Products server.",
+    "version": "2.0.0",
+    "title": "Swagger Productstore v2"
+  },
+  "basePath": "/api/v2",
+  "tags": [
+    {
+      "name": "product",
+      "description": "Everything about your Products"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": [
+          "product"
+        ],
+        "summary": "Find All Products",
+        "operationId": "findAll",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ProductItem"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ProductItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string",
+          "description": "Order Status",
+          "enum": [
+            "UNKNOWN",
+            "FOOD",
+            "WEAR",
+            "TOY"
+          ]
+        }
+      }
+    }
+  }
+}

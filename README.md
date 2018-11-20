@@ -4,7 +4,7 @@
 js-sql-node-react
 =========================
 
-This technical stack is not the state-of-the-art, but a stable one (no need to wory for 3-5 years). It's usefull for long-term support apps, like Business or IT Intranet webapps.
+This technical stack is not the state-of-the-art, but a stable one (no need to worry for 3-5 years). It's usefull for long-term support apps, like Business or IT Intranet webapps.
 
 ![alt text](docs/README-tech-stack.png)
 

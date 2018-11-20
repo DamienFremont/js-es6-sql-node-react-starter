@@ -5,7 +5,7 @@ import intl from 'react-intl-universal';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import logo from './logo.svg';
-import { About, Contact, Help, Home, NotFound } from './pages';
+import { About, Contact, Help, Home, NotFound, ProductSearch } from './pages';
 
 class App extends React.Component {
 
@@ -27,6 +27,7 @@ class App extends React.Component {
             <Route exact path="/help" component={Help} />
             <Route exact path="/help/about" component={About} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/product/search" component={ProductSearch} />
             <Route path="*" component={NotFound} />
           </Switch>
         </MainLayout>

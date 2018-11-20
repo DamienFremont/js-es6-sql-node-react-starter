@@ -1,5 +1,5 @@
 import * as Sequelize from "sequelize";
-import ProductAttributes from "../../../client/src/model/product/ProductModel";
+import ProductAttributes from "../../../client/src/model/ProductModel";
 
 export default (sequalize) => {
   return sequalize.define("Products", {

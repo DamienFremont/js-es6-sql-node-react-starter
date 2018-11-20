@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { HelloResponse } from '../../../client/src/model/hello/HelloModel';
+import { HelloResponse } from '../../../client/src/model/HelloModel';
 
 export default () => {
     let api = Router();

@@ -1,4 +1,4 @@
-import { HelloResponse } from "../model/hello/HelloModel";
+import { HelloResponse } from "../model/HelloModel";
 
 class HelloAPI {
 

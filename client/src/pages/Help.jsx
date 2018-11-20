@@ -5,8 +5,8 @@ import intl from 'react-intl-universal';
 import { Link } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, Button, Collapse, Container, ListGroup, ListGroupItem } from 'reactstrap';
 
-import FixProblemsHelp from '../components/Help/FixProblemsHelp';
-import GetStartedHelp from '../components/Help/GetStartedHelp';
+import FixProblemsHelp from '../components/help/FixProblemsHelp';
+import GetStartedHelp from '../components/help/GetStartedHelp';
 
 class Help extends React.Component {
 

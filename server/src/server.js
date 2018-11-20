@@ -7,6 +7,7 @@ import LoggerHelper from './helpers/LoggerHelper';
 import EnvUtils from './utils/EnvUtils';
 import fs from 'fs';
 import Sequelize from 'sequelize';
+import db from "./db";
 
 /**
  * Main script for server
@@ -61,22 +62,14 @@ class App {
   }
   
   defineModels(configJson, models) {
-    const env = process.env.NODE_ENV || "development";
-    const config = configJson[env];
-    const url = config.url || process.env.DATABSE_CONNECTION_URI;
-    const sequelize = this.sequelize = new Sequelize(url, config);
     (async () => {
-      this.models.Products = sequelize.define('Product', {
-        id: { type: Sequelize.UUID, primaryKey: true, defaultValue: Sequelize.UUIDV4 },
-        name: { type: Sequelize.STRING, allowNull: false },
-        price: { type: Sequelize.DECIMAL(10, 2), allowNull: false },
-        type: { type: Sequelize.STRING, allowNull: false },
-        archived: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false }
-      });
+      // database
+      this.sequelize = db.sequelize;
+      this.models.Products = db.Products;
+      await db.sequelize.sync({ force: true });
       // mock
-      await sequelize.sync({ force: true });
       for (let index = 1; index < 40; index++) {
-        models.Products.create({
+        db.Products.create({
           id: index.toString(),
           name: `Un${index}`,
           type: `FOOD`,

@@ -1,3 +1,4 @@
+import { HelloResponse } from "../model/hello/HelloModel";
 
 class HelloAPI {
 
@@ -7,7 +8,7 @@ class HelloAPI {
     if (response.status !== 200) {
       throw Error(body.message);
     }
-    return body;
+    return new HelloResponse(body);
   };
 
 }
